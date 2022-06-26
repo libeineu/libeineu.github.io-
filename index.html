@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+body {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+a {text-decoration : none; color : #003399;}
+a:hover {text-decoration:underline; color: #8C1515; }
+</style>
+
+<style>
+.disabled{
+    pointer-events: none;
+    color:black;
+}
+</style>
+
+<script>
+function copy(dest, source) {
+  if(dest.source == source) {
+    dest.innerHTML = "";
+    dest.source = null;
+  }
+  else {
+    dest.innerHTML = source.innerHTML;
+    dest.source = source;
+  }
+  dest.blur();
+}
+</script>
+
+<head>
+    <title>Bei Li's Homepage</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="author" content="Bei Li">
+    <meta name="keywords" content="Bei Li, Bei Li Northeastern University">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="Homepage of Bei Li">
+</head>
+
+<body>
+
+<table cellpadding="20" style="font-size: 17px">
+<tr>
+<td><a href="images/pic_ZonghanYang.jpg"><img src='images/pic_ZonghanYang.jpg' alt="Bei Li", height = 250></a></td>
+<td>
+<h1> Bei Li <span style="font-family:STFangsong; font-size:18pt"> (李 北)</span> </h1>
+Second-year doctoral student<br>
+<a href="https://www.nlplab.com/">Natural Language Processing Lab</a><br>
+<a href="http://www.cse.neu.edu.cn/">Department of Computer Science and Technology</a><br>
+<a href="https://www.neu.cn/">Northeastern University</a><br>
+
+<br>
+<b>Email</b>: <tt>&#109;&#105;&#110;&#105;&#99;&#104;&#101;&#115;&#104;&#105;&#114;&#101;&#64;&#49;&#54;&#51;&#46;&#99;&#111;&#109;</tt> <br>
+<a href = "#publications">[Publications]</a> <a href = "#service">[Service]</a> <a href = "CV_yzh_202202.pdf">[CV (2022.2)]</a> <br>
+</td>
+</tr>
+</table>
+
+<p style="width: 820px;">
+Welcome! I am a second-year Computer Science PhD student at <a href = "https://www.tsinghua.edu.cn/en/">Northeastern University</a>. I am advised by Prof. <a href = "https://www.nlplab.com/members/xiaotong.html">Tong Xiao</a> and affiliated with <a href="https://www.nlplab.com/">NEUNLP Lab</a>. I received my B.Eng in 2017 from Northeastern University, majoring in Computer Science and Technology, and my master in 2020 from Northeastern University, majoring in Computer Software and Theory.
+
+<!-- <br><br>
+
+I feel fortunate to be able to collaborate with lots of researchers from different backgrounds. I enjoyed working with Prof. <a href="https://matbc.github.io/"> Chenglong Bao </a> and Prof. <a href="https://shizqi.github.io/"> Zuoqiang Shi </a> in <a href="https://ymsc.tsinghua.edu.cn/en/"> Yau Mathematical Sciences Center </a> from October, 2019 to October, 2020. I was a visiting student in Language Technology Institute, Carnegie Mellon University from July, 2019 to September, 2019, advised by Prof. <a href = "http://www.cs.cmu.edu/~ytsvetko/"> Yulia Tsvetkov</a>. I was a research intern advised by Prof. <a href = "http://nlp.csai.tsinghua.edu.cn/site2/index.php/zh/people?id=16"> Maosong Sun</a> at THUNLP lab from March, 2017 to April, 2018.  -->
+
+<br><br>
+
+My research interest lies at <b>trustworthy</b> and <b>human-centered</b> AI. I <b>guide</b> NLP models to <b>avoid undesirable behavior</b> <a href="https://aclanthology.org/P19-1623">[ACL19]</a> <a href="https://openreview.net/forum?id=eBCmOocUejf">[ICLR22]</a>. I also <b>stabilize the dynamics</b> of a deep network according to its continuous formulations <a href="https://proceedings.mlr.press/v119/yang20g.html">[ICML20]</a> to obtain robust and controllable models. I am always fascinated to stand at the intersection of varied perspectives with a unified aim: propose novel deep learning techniques to assist human intelligence and make a positive social impact.
+
+</p>
+
+<a name = "publications" class="disabled"><h2> Publications </h2></a>
+
+<ul>
+
+  <li> <a href="papers/aiopen21.pdf"><b>Learning Multiscale Transformer Models for Sequence Generation</b></a><br> <b>Bei Li</b>, Tong Zheng, Yi Jing, Chengbo Jiao, Tong Xiao, Jingbo Zhu. <br> In ICML 2022 <i>(Spotlight)</i>. </li>
+  <div id="bib3" style="display:none">
+  <blockquote>
+  <pre>
+    @article{li2022learning,
+      title={Learning Multiscale Transformer Models for Sequence Generation},
+      author={Li, Bei and Zheng, Tong and Jing, Yi and Jiao, Chengbo and Xiao, Tong and Zhu, Jingbo},
+      journal={arXiv preprint arXiv:2206.09337},
+      year={2022}
+    }
+  </pre>
+  </blockquote>
+  </div>
+  <font size="-1">[<a href="javascript:copy(div3, bib3)">bib</a>] [<a href="https://github.com/libeineu/UMST">code</a>]</font><br>
+  <div id="div3"></div> <br>
+
+  <li> <a href="https://openreview.net/pdf?id=eBCmOocUejf"><b>ODE Transformer: An Ordinary Differential Equation-Inspired Model for Sequence Generation</b></a><br> <b>Bei Li</b>, Quan Du, Tao Zhou, Yi Jing, Shuhan Zhou, Xin Zeng, Tong Xiao, JingBo Zhu, Xuebo Liu, Min Zhang. <br> In ACL 2022 <i>(Long paper)</i>. </li>
+  <div id="bib5" style="display:none">
+    <blockquote>
+    <pre>
+      @inproceedings{li-etal-2022-ode,
+        title = "{ODE} Transformer: An Ordinary Differential Equation-Inspired Model for Sequence Generation",
+        author = "Li, Bei  and
+          Du, Quan  and
+          Zhou, Tao  and
+          Jing, Yi  and
+          Zhou, Shuhan  and
+          Zeng, Xin  and
+          Xiao, Tong  and
+          Zhu, JingBo  and
+          Liu, Xuebo  and
+          Zhang, Min",
+        booktitle = "Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+        month = may,
+        year = "2022",
+        address = "Dublin, Ireland",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/2022.acl-long.571",
+        doi = "10.18653/v1/2022.acl-long.571",
+        pages = "8335--8351",
+    }
+    </pre>
+    </blockquote>
+    </div>
+    <font size="-1">[<a href="javascript:copy(div5, bib5)">bib</a>] [<a href="https://github.com/libeineu/ODE-Transformer">code</a>]</font><br>
+    <div id="div5"></div> <br>
+
+  <li> <a href="https://aclanthology.org/2022.acl-long.438.pdf"><b>On Vision Features in Multimodal Machine Translation</b></a><br> <b>Bei Li</b>, Chuanhao Lv, Zefan Zhou, Tao Zhou, Tong Xiao, Anxiang Ma, JingBo Zhu. <br> In ACL 2022 <i>(Long paper)</i>. </li>
+  <div id="bib4" style="display:none">
+  <blockquote>
+  <pre>
+    @inproceedings{li-etal-2022-vision,
+      title = "On Vision Features in Multimodal Machine Translation",
+      author = "Li, Bei  and
+        Lv, Chuanhao  and
+        Zhou, Zefan  and
+        Zhou, Tao  and
+        Xiao, Tong  and
+        Ma, Anxiang  and
+        Zhu, JingBo",
+      booktitle = "Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+      month = may,
+      year = "2022",
+      address = "Dublin, Ireland",
+      publisher = "Association for Computational Linguistics",
+      url = "https://aclanthology.org/2022.acl-long.438",
+      doi = "10.18653/v1/2022.acl-long.438",
+      pages = "6327--6337",
+  }
+  </pre>
+  </blockquote>
+  </div>
+  <font size="-1">[<a href="javascript:copy(div4, bib4)">bib</a>] [<a href="https://github.com/libeineu/fairseq_mmt">code</a>]</font><br>
+  <div id="div4"></div> <br>
+
+  <li> <a href="https://aclanthology.org/2021.acl-long.162.pdf"><b>Weight Distillation: Transferring the Knowledge in Neural Network Parameters</b></a><br> Ye Lin, Yanyang Li, Ziyang Wang, <b>Bei Li</b>, Quan Du, Tong Xiao, Jingbo Zhu. <br> In ACL 2021. </li>
+  <div id="bib2" style="display:none">
+  <blockquote>
+  <pre>
+    @inproceedings{lin-etal-2021-weight,
+      title = "Weight Distillation: Transferring the Knowledge in Neural Network Parameters",
+      author = "Lin, Ye  and
+        Li, Yanyang  and
+        Wang, Ziyang  and
+        Li, Bei  and
+        Du, Quan  and
+        Xiao, Tong  and
+        Zhu, Jingbo",
+      booktitle = "Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)",
+      month = aug,
+      year = "2021",
+      address = "Online",
+      publisher = "Association for Computational Linguistics",
+      url = "https://aclanthology.org/2021.acl-long.162",
+      doi = "10.18653/v1/2021.acl-long.162",
+      pages = "2076--2088",
+  }
+  </pre>
+  </blockquote>
+  </div>
+  <font size="-1">[<a href="javascript:copy(div2, bib2)">bib</a>] </font><br>
+  <div id="div2"></div> <br>
+
+  <li> <a href="https://ojs.aaai.org/index.php/AAAI/article/view/17561"><b>Learning Light-Weight Translation Models from Deep Transformer</b></a><br><b>Bei Li</b>, Ziyang Wang, Hui Liu, Quan Du, Tong Xiao, Chunliang Zhang, Jingbo Zhu. <br> In AAAI 2021. </li>
+  <div id="bib2" style="display:none">
+  <blockquote>
+  <pre>
+    @inproceedings{DBLP:conf/aaai/LiWLDXZZ21,
+      author    = {Bei Li and
+                   Ziyang Wang and
+                   Hui Liu and
+                   Quan Du and
+                   Tong Xiao and
+                   Chunliang Zhang and
+                   Jingbo Zhu},
+      title     = {Learning Light-Weight Translation Models from Deep Transformer},
+      booktitle = {Thirty-Fifth {AAAI} Conference on Artificial Intelligence, {AAAI}
+                   2021, Thirty-Third Conference on Innovative Applications of Artificial
+                   Intelligence, {IAAI} 2021, The Eleventh Symposium on Educational Advances
+                   in Artificial Intelligence, {EAAI} 2021, Virtual Event, February 2-9,
+                   2021},
+      pages     = {13217--13225},
+      publisher = {{AAAI} Press},
+      year      = {2021},
+      url       = {https://ojs.aaai.org/index.php/AAAI/article/view/17561},
+    }
+  </pre>
+  </blockquote>
+  </div>
+  <font size="-1">[<a href="javascript:copy(div4, bib4)">bib</a>] [<a href="https://github.com/libeineu/GPKD">code</a>]</font><br>
+  <div id="div4"></div> <br>
+
+  <li> <a href="https://aclanthology.org/2021.acl-long.162.pdf"><b>Shallow-to-Deep Training for Neural Machine Translation</b></a><br><b>Bei Li</b>, Ziyang Wang, Hui Liu, Yufan Jiang, Quan Du, Tong Xiao, Huizhen Wang, Jingbo Zhu. <br> In EMNLP 2020. </li>
+  <div id="bib2" style="display:none">
+  <blockquote>
+  <pre>
+    @inproceedings{li-etal-2020-shallow,
+      title = "Shallow-to-Deep Training for Neural Machine Translation",
+      author = "Li, Bei  and
+        Wang, Ziyang  and
+        Liu, Hui  and
+        Jiang, Yufan  and
+        Du, Quan  and
+        Xiao, Tong  and
+        Wang, Huizhen  and
+        Zhu, Jingbo",
+      booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+      month = nov,
+      year = "2020",
+      address = "Online",
+      publisher = "Association for Computational Linguistics",
+      url = "https://aclanthology.org/2020.emnlp-main.72",
+      doi = "10.18653/v1/2020.emnlp-main.72",
+      pages = "995--1005",
+  }
+  </pre>
+  </blockquote>
+  </div>
+  <font size="-1">[<a href="javascript:copy(div2, bib2)">bib</a>] [<a href="https://github.com/libeineu/SDT-Training">code</a>]</font><br>
+  <div id="div2"></div> <br>
+
+  <li> <a href="https://aclanthology.org/2021.acl-long.162.pdf"><b>Does Multi-Encoder Help? A Case Study on Context-Aware Neural Machine Translation</b></a><br><b>Bei Li</b>, Hui Liu, Ziyang Wang, Yufan Jiang, Tong Xiao, Jingbo Zhu, Tongran Liu, Changliang Li. <br> In ACL 2020 <i>(Short paper)</i>. </li>
+  <div id="bib2" style="display:none">
+  <blockquote>
+  <pre>
+    @inproceedings{li-etal-2020-multi-encoder,
+      title = "Does Multi-Encoder Help? A Case Study on Context-Aware Neural Machine Translation",
+      author = "Li, Bei  and
+        Liu, Hui  and
+        Wang, Ziyang  and
+        Jiang, Yufan  and
+        Xiao, Tong  and
+        Zhu, Jingbo  and
+        Liu, Tongran  and
+        Li, Changliang",
+      booktitle = "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+      month = jul,
+      year = "2020",
+      address = "Online",
+      publisher = "Association for Computational Linguistics",
+      url = "https://aclanthology.org/2020.acl-main.322",
+      doi = "10.18653/v1/2020.acl-main.322",
+      pages = "3512--3518",
+  }
+  </pre>
+  </blockquote>
+  </div>
+  <font size="-1">[<a href="javascript:copy(div2, bib2)">bib</a>] [<a href="https://github.com/libeineu/Context-Aware">code</a>]</font><br>
+  <div id="div2"></div> <br>
+
+  <li> <a href="papers/acl19.pdf"><b>Learning deep transformer models for machine translation</b></a><br> Qiang Wang, <b>Bei Li</b>, Tong Xiao, Jingbo Zhu, Changliang Li, Derek F Wong, Lidia S Chao <br> In ACL 2019 <i>(Long paper)</i>. </li>
+  <div id="bib1" style="display:none">
+  <blockquote>
+  <pre>
+    @inproceedings{yang-etal-2019-reducing,
+      title = "Reducing Word Omission Errors in Neural Machine Translation: A Contrastive Learning Approach",
+      author = "Yang, Zonghan  and
+        Cheng, Yong  and
+        Liu, Yang  and
+        Sun, Maosong",
+      booktitle = "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics",
+      month = jul,
+      year = "2019",
+      address = "Florence, Italy",
+      publisher = "Association for Computational Linguistics",
+      url = "https://aclanthology.org/P19-1623",
+      doi = "10.18653/v1/P19-1623",
+      pages = "6191--6196",
+    }
+  </pre>
+  </blockquote>
+  </div>
+  <font size="-1">[<a href="javascript:copy(div1, bib1)">bib</a>] [<a href="https://github.com/OpenNMT/OpenNMT-tf">Implementation in OpenNMT-tf</a>]</font><br>
+  <div id="div1"></div> <br>
+
+  <li> <a href="papers/ijcai18.pdf"><b>The niutrans machine translation systems for wmt19</b></a><br> <b>Bei Li</b>, Yinqiao Li, Chen Xu, Ye Lin, Jiqiang Liu, Hui Liu, Ziyang Wang, Yuhao Zhang, Nuo Xu, Zeyang Wang, Kai Feng, Hexuan Chen, Tengbo Liu, Yanyang Li, Qiang Wang, Tong Xiao, Jingbo Zhu. <br> In WMT 2019. </li>
+  <div id="bib0" style="display:none">
+  <blockquote>
+  <pre>
+    @inproceedings{li-etal-2019-niutrans,
+      title = "The {N}iu{T}rans Machine Translation Systems for {WMT}19",
+      author = "Li, Bei  and
+        Li, Yinqiao  and
+        Xu, Chen  and
+        Lin, Ye  and
+        Liu, Jiqiang  and
+        Liu, Hui  and
+        Wang, Ziyang  and
+        Zhang, Yuhao  and
+        Xu, Nuo  and
+        Wang, Zeyang  and
+        Feng, Kai  and
+        Chen, Hexuan  and
+        Liu, Tengbo  and
+        Li, Yanyang  and
+        Wang, Qiang  and
+        Xiao, Tong  and
+        Zhu, Jingbo",
+      booktitle = "Proceedings of the Fourth Conference on Machine Translation (Volume 2: Shared Task Papers, Day 1)",
+      month = aug,
+      year = "2019",
+      address = "Florence, Italy",
+      publisher = "Association for Computational Linguistics",
+      url = "https://aclanthology.org/W19-5325",
+      doi = "10.18653/v1/W19-5325",
+      pages = "257--266",
+  }
+  </pre>
+  </blockquote>
+  </div>
+  <font size="-1">[<a href="javascript:copy(div0, bib0)">bib</a>] </font><br>
+  <div id="div0"></div> <br>
+</ul>
+
+<a name = "service" class="disabled"><h2> Service </h2></a>
+<ul>
+<li> Co-chair: Student Research Workshop (SRW) in AACL-IJCNLP 2022
+<li> Maintainer: <a href="https://github.com/THUNLP-MT/MT-Reading-List"><b>Machine Translation Reading List</b></a>
+<li> Editor: <a href="https://thumtblog.github.io/"><b>THUMT Research Blog</b></a>
+<li> Teaching Assistant: 
+<ol style="list-style-type: square;">
+  <li style="margin-left:-1.5em"> (40240432) <b>Formal Language & Automaton</b>: 2021-2022 Fall
+  <li style="margin-left:-1.5em"> (14204002) <b>Progressive English Reading & Writing</b>: 2020-2021 Fall, 2020-2021 Spring
+</ol>
+</ul>
+
+Last updated: 2022/2.
